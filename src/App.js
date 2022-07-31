@@ -14,6 +14,7 @@ import ManageDoctors from './Pages/Dashboard/ManageDoctors';
 import Users from './Pages/Dashboard/Users';
 import Payment from './Pages/Dashboard/Payment';
 import About from './Pages/About/About';
+import PasswordReset from './Pages/Shared/Login/PasswordReset';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/passwordReset" element={<PasswordReset/>} />
       </Routes>
       <ToastContainer
         position="top-center"

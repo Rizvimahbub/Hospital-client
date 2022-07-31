@@ -41,6 +41,8 @@ const Login = () => {
         signInWithEmailAndPassword(data.email, data.password);
     }
 
+    
+
     return (
         <div className='flex h-screen justify-center items-center'>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -91,6 +93,7 @@ const Login = () => {
                                     }
                                 })}
                             />
+                            <p className='text-sm text-[#6350f2] text-right mt-2'><Link to='/passwordReset'>Forget password?</Link></p>
                             <label className="label">
                                 {errors.password?.type === 'required' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                 {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
@@ -100,7 +103,7 @@ const Login = () => {
                         {signInError}
                         <input className='btn w-full max-w-xs text-white  bg-gradient-to-r from-[#6350f2] to-[#8c63f4] text-white border-0' type="submit" value="Login" />
                     </form>
-                    <p><small>New to Doctors Portal <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
+                    <p className='text-center'><small>New to NYDC  <Link className='text-[#6350f2]' to="/signup">Create New Account</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
