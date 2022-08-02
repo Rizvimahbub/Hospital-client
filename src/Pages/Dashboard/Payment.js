@@ -10,7 +10,7 @@ const stripePromise = loadStripe('pk_test_51L4JBiKulUBEIW5Lj8Zf0l5FBPuEhuryA1F12
 
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/booking/${id}`;
+    const url = `https://mysterious-ridge-08700.herokuapp.com/booking/${id}`;
     // const [appointment, setAppointment] = useState({});
     // useEffect(() => {
     //     fetch(url, {

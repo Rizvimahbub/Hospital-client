@@ -20,12 +20,12 @@ const Dashboard = () => {
                     <label for="dashboard-sidebar" class="drawer-overlay"></label>
                     <ul class="menu p-4 overflow-y-auto w-48 bg-base-100 text-base-content">
 
-                        <li><Link to="/dashboard">Appointments</Link></li>
+                        <li className='font-semibold'><Link to="/dashboard">Appointments</Link></li>
                         
                         {admin && <>
-                            <li><Link to="/dashboard/users">All Users</Link></li>
-                            <li><Link to="/dashboard/addDoctor">Add a Doctor</Link></li>
-                            <li><Link to="/dashboard/manageDoctor">Manage Doctors</Link></li>
+                            <li className='font-semibold'><Link to="/dashboard/users">All Users</Link></li>
+                            <li className='font-semibold'><Link to="/dashboard/addDoctor">Add a Doctor</Link></li>
+                            <li className='font-semibold'><Link to="/dashboard/manageDoctor">Manage Doctors</Link></li>
                         </>}
                     </ul>
                 </div>

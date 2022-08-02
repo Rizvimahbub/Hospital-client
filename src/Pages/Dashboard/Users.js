@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import UserRow from './UserRow';
 import { useSelector, useDispatch } from 'react-redux';
-import allTodos from '../../Services/Actions/Actions';
 import allUsers from '../../Services/Actions/Actions2';
 
 
@@ -13,7 +12,7 @@ const Users = () => {
         dispatch(allUsers())
     }, [])
     // useEffect(() => {
-    //     fetch('http://localhost:5000/user', {
+    //     fetch('https://mysterious-ridge-08700.herokuapp.com/user', {
     //         method: 'GET',
     //         headers: {
     //             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -22,7 +21,7 @@ const Users = () => {
     //         .then(res => res.json())
     //         .then(data => setUsers(data))
     // }, [])
-    // const {data: users, isLoading} = useQuery('users', ()=> fetch('http://localhost:5000/user').then(res => res.json()))
+    // const {data: users, isLoading} = useQuery('users', ()=> fetch('https://mysterious-ridge-08700.herokuapp.com/user').then(res => res.json()))
     // console.log(users)
 
     // if (isLoading) {
@@ -37,8 +36,8 @@ const Users = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Admin Button</th>
+                            <th>Remove Button</th>
                         </tr>
                     </thead>
                     <tbody>

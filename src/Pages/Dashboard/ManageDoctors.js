@@ -15,7 +15,7 @@ const ManageDoctors = () => {
     // const [doctors, setDoctors] = useState([]);
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/doctor', {
+    //     fetch('https://mysterious-ridge-08700.herokuapp.com/doctor', {
     //         method: 'GET',
     //         headers: {
     //             'content-type': 'application/json',
@@ -35,7 +35,7 @@ const ManageDoctors = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Avatar</th>
+                            <th>Doctors</th>
                             <th>Name</th>
                             <th>Specialty</th>
                             <th>Action</th>
