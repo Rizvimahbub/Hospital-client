@@ -3,15 +3,18 @@ import doctor from '../../assets/images/doctor.png';
 import appointment from '../../assets/images/appointment.png';
 import PrimaryButton from '../Shared/PrimaryButton';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MakeAppointment = () => {
+    AOS.init();
     return (
-        <section style={{
+        <section data-aos="zoom-in-up" data-aos-duration="2500" style={{
             background: `url(${appointment})`
         }} 
         className='grid md:grid-cols-1 lg:grid-cols-2 justify-center items-center m-5 h-2/4 :p-3'>
             <div className='flex-1 justify-center items-center '>
-                <img className='w-7/12  mt-[-100px]' src={doctor} alt="" />
+                <img  className='w-7/12  mt-[-100px]' src={doctor} alt="" />
             </div>
             <div className='flex-1 p-5'>
                 <h3 className='text-xl text-[#6350f2] font-bold'>Appointment</h3>

@@ -1,5 +1,5 @@
 import { signOut } from 'firebase/auth';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -22,10 +22,10 @@ const Navbar = () => {
         {
             user && <li className='font-semibold'><Link to="/dashboard">Dashboard</Link></li>
         }
-        <li  className='font-semibold'>{user ? <button className="btn btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
+        <li  className='font-semibold'>{user ? <button className=" btn-ghost" onClick={logout} >Sign Out</button> : <Link to="/login">Login</Link>}</li>
     </>
     return (
-        <div class="navbar sticky">
+        <div class='navbar sticky top-0'>
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -38,7 +38,7 @@ const Navbar = () => {
                 {/* <a class="btn btn-ghost normal-case text-xl font-bold">New York Diagnostic Center</a> */}
                 <img src={Logo}/>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-end hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>
